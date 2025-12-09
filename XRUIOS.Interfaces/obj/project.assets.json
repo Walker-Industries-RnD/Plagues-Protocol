@@ -1,0 +1,709 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "Grpc.AspNetCore.Server/2.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Net.Common": "2.57.0"
+        },
+        "compile": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Grpc.Core.Api/2.57.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Grpc.Net.Client/2.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Net.Common": "2.57.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Grpc.Net.Common/2.57.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.57.0"
+        },
+        "compile": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "MagicOnion/7.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.57.0",
+          "Grpc.Core.Api": "2.57.0",
+          "Grpc.Net.Client": "2.57.0",
+          "MagicOnion.Client": "7.0.7",
+          "MagicOnion.Server": "7.0.7",
+          "MessagePack": "3.1.1",
+          "Multicaster": "2.1.1"
+        },
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        }
+      },
+      "MagicOnion.Abstractions/7.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.57.0",
+          "MessagePack": "3.1.1"
+        },
+        "compile": {
+          "lib/net8.0/MagicOnion.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MagicOnion.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MagicOnion.Client/7.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.57.0",
+          "Grpc.Net.Client": "2.57.0",
+          "MagicOnion.Abstractions": "7.0.7",
+          "MagicOnion.Serialization.MessagePack": "7.0.7",
+          "MagicOnion.Shared": "7.0.7",
+          "MessagePack": "3.1.1"
+        },
+        "compile": {
+          "lib/net9.0/MagicOnion.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/MagicOnion.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MagicOnion.Serialization.MessagePack/7.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.57.0",
+          "MagicOnion.Abstractions": "7.0.7",
+          "MessagePack": "3.1.1"
+        },
+        "compile": {
+          "lib/net8.0/MagicOnion.Serialization.MessagePack.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MagicOnion.Serialization.MessagePack.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MagicOnion.Server/7.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.57.0",
+          "Grpc.Core.Api": "2.57.0",
+          "MagicOnion.Abstractions": "7.0.7",
+          "MagicOnion.Serialization.MessagePack": "7.0.7",
+          "MagicOnion.Shared": "7.0.7",
+          "MessagePack": "3.1.1",
+          "Multicaster": "2.1.1"
+        },
+        "compile": {
+          "lib/net9.0/MagicOnion.Server.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/MagicOnion.Server.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MagicOnion.Shared/7.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.57.0",
+          "MagicOnion.Abstractions": "7.0.7",
+          "MagicOnion.Serialization.MessagePack": "7.0.7",
+          "MessagePack": "3.1.1"
+        },
+        "compile": {
+          "lib/net8.0/MagicOnion.Shared.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MagicOnion.Shared.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MessagePack/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MessagePack.Annotations": "3.1.1",
+          "MessagePackAnalyzer": "3.1.1",
+          "Microsoft.NET.StringTools": "17.11.4"
+        },
+        "compile": {
+          "lib/net9.0/MessagePack.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/MessagePack.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MessagePack.Annotations/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MessagePackAnalyzer/3.1.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Microsoft.NET.StringTools/17.11.4": {
+        "type": "package",
+        "compile": {
+          "ref/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.NET.StringTools.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Multicaster/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Cysharp.Runtime.Multicaster.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Cysharp.Runtime.Multicaster.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Grpc.AspNetCore.Server/2.57.0": {
+      "sha512": "g4JKqJ3RB7WKOrBxMSCkRc/1Xa5GqYlVb7k8OjUsERKW7LdSQ0ajcFMZ4Q79BZgA/xbJlGttmq4ewyzpBqGetA==",
+      "type": "package",
+      "path": "grpc.aspnetcore.server/2.57.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.aspnetcore.server.2.57.0.nupkg.sha512",
+        "grpc.aspnetcore.server.nuspec",
+        "lib/net6.0/Grpc.AspNetCore.Server.dll",
+        "lib/net6.0/Grpc.AspNetCore.Server.pdb",
+        "lib/net6.0/Grpc.AspNetCore.Server.xml",
+        "lib/net7.0/Grpc.AspNetCore.Server.dll",
+        "lib/net7.0/Grpc.AspNetCore.Server.pdb",
+        "lib/net7.0/Grpc.AspNetCore.Server.xml",
+        "lib/net8.0/Grpc.AspNetCore.Server.dll",
+        "lib/net8.0/Grpc.AspNetCore.Server.pdb",
+        "lib/net8.0/Grpc.AspNetCore.Server.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Core.Api/2.57.0": {
+      "sha512": "48jpfMyYdhaPS6PGnk7sEqSO3+c/w11ahY+a33ymo0BsQEsBVIoJoS5xMsl5RzBlpKY41PnN+qJGMm3VyE5OQg==",
+      "type": "package",
+      "path": "grpc.core.api/2.57.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.core.api.2.57.0.nupkg.sha512",
+        "grpc.core.api.nuspec",
+        "lib/net462/Grpc.Core.Api.dll",
+        "lib/net462/Grpc.Core.Api.pdb",
+        "lib/net462/Grpc.Core.Api.xml",
+        "lib/netstandard1.5/Grpc.Core.Api.dll",
+        "lib/netstandard1.5/Grpc.Core.Api.pdb",
+        "lib/netstandard1.5/Grpc.Core.Api.xml",
+        "lib/netstandard2.0/Grpc.Core.Api.dll",
+        "lib/netstandard2.0/Grpc.Core.Api.pdb",
+        "lib/netstandard2.0/Grpc.Core.Api.xml",
+        "lib/netstandard2.1/Grpc.Core.Api.dll",
+        "lib/netstandard2.1/Grpc.Core.Api.pdb",
+        "lib/netstandard2.1/Grpc.Core.Api.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Net.Client/2.57.0": {
+      "sha512": "vVDW0ePnaH9Na+wjm64vpzdj05JEjOCmAXUlANVc+s3hBBreEizfbmlzWPjsL6ZskaSrA59Ckb0J2l1HMvtMHQ==",
+      "type": "package",
+      "path": "grpc.net.client/2.57.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.net.client.2.57.0.nupkg.sha512",
+        "grpc.net.client.nuspec",
+        "lib/net462/Grpc.Net.Client.dll",
+        "lib/net462/Grpc.Net.Client.pdb",
+        "lib/net462/Grpc.Net.Client.xml",
+        "lib/net6.0/Grpc.Net.Client.dll",
+        "lib/net6.0/Grpc.Net.Client.pdb",
+        "lib/net6.0/Grpc.Net.Client.xml",
+        "lib/net7.0/Grpc.Net.Client.dll",
+        "lib/net7.0/Grpc.Net.Client.pdb",
+        "lib/net7.0/Grpc.Net.Client.xml",
+        "lib/net8.0/Grpc.Net.Client.dll",
+        "lib/net8.0/Grpc.Net.Client.pdb",
+        "lib/net8.0/Grpc.Net.Client.xml",
+        "lib/netstandard2.0/Grpc.Net.Client.dll",
+        "lib/netstandard2.0/Grpc.Net.Client.pdb",
+        "lib/netstandard2.0/Grpc.Net.Client.xml",
+        "lib/netstandard2.1/Grpc.Net.Client.dll",
+        "lib/netstandard2.1/Grpc.Net.Client.pdb",
+        "lib/netstandard2.1/Grpc.Net.Client.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Net.Common/2.57.0": {
+      "sha512": "babJpsAwVH3lPjg8cvWGqW+Fos1RN+cqudfkW2EyB2DK2v5yjD2axZ1Uay6kR6ec2/p9ljodktrfoJ2lJ/pwnQ==",
+      "type": "package",
+      "path": "grpc.net.common/2.57.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.net.common.2.57.0.nupkg.sha512",
+        "grpc.net.common.nuspec",
+        "lib/net6.0/Grpc.Net.Common.dll",
+        "lib/net6.0/Grpc.Net.Common.pdb",
+        "lib/net6.0/Grpc.Net.Common.xml",
+        "lib/net7.0/Grpc.Net.Common.dll",
+        "lib/net7.0/Grpc.Net.Common.pdb",
+        "lib/net7.0/Grpc.Net.Common.xml",
+        "lib/net8.0/Grpc.Net.Common.dll",
+        "lib/net8.0/Grpc.Net.Common.pdb",
+        "lib/net8.0/Grpc.Net.Common.xml",
+        "lib/netstandard2.0/Grpc.Net.Common.dll",
+        "lib/netstandard2.0/Grpc.Net.Common.pdb",
+        "lib/netstandard2.0/Grpc.Net.Common.xml",
+        "lib/netstandard2.1/Grpc.Net.Common.dll",
+        "lib/netstandard2.1/Grpc.Net.Common.pdb",
+        "lib/netstandard2.1/Grpc.Net.Common.xml",
+        "packageIcon.png"
+      ]
+    },
+    "MagicOnion/7.0.7": {
+      "sha512": "J4/z8MWvfpRi7+TbrrIcB3vvVBQTpWf5G14nEVKogbSBE10MYJn/SIBHvhyMAwlTJGPqUJ6P4Q1JF4HTYrTvpg==",
+      "type": "package",
+      "path": "magiconion/7.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net6.0/_._",
+        "lib/net8.0/_._",
+        "magiconion.7.0.7.nupkg.sha512",
+        "magiconion.nuspec"
+      ]
+    },
+    "MagicOnion.Abstractions/7.0.7": {
+      "sha512": "S7Cafrs99NRM07G0WYev/FSNrGG+G10AQNXUeuaJ54XRFSkcnxs1Cfm4GKGkTz/tmIVsLatWcFu5aPnBH0cCkA==",
+      "type": "package",
+      "path": "magiconion.abstractions/7.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net8.0/MagicOnion.Abstractions.dll",
+        "lib/net8.0/MagicOnion.Abstractions.xml",
+        "lib/netstandard2.0/MagicOnion.Abstractions.dll",
+        "lib/netstandard2.0/MagicOnion.Abstractions.xml",
+        "magiconion.abstractions.7.0.7.nupkg.sha512",
+        "magiconion.abstractions.nuspec"
+      ]
+    },
+    "MagicOnion.Client/7.0.7": {
+      "sha512": "fvT/qULiVdlOjtgUXvSx27bdjGN1M4gulCKAfi12q97MvD9OVcbG/99YepPuj0UYx6mjDwg4QW8GVkfAjETY3w==",
+      "type": "package",
+      "path": "magiconion.client/7.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "analyzers/dotnet/roslyn4.3/cs/MagicOnion.Client.SourceGenerator.dll",
+        "lib/net8.0/MagicOnion.Client.dll",
+        "lib/net8.0/MagicOnion.Client.xml",
+        "lib/net9.0/MagicOnion.Client.dll",
+        "lib/net9.0/MagicOnion.Client.xml",
+        "lib/netstandard2.0/MagicOnion.Client.dll",
+        "lib/netstandard2.0/MagicOnion.Client.xml",
+        "lib/netstandard2.1/MagicOnion.Client.dll",
+        "lib/netstandard2.1/MagicOnion.Client.xml",
+        "magiconion.client.7.0.7.nupkg.sha512",
+        "magiconion.client.nuspec"
+      ]
+    },
+    "MagicOnion.Serialization.MessagePack/7.0.7": {
+      "sha512": "HDPpG9kLPsK3o7cKs2Zyn5A4yg8TG+U2D66kr0wcs+/SVEoPq1pa6p6lr2SlmDPMNP048bzho9Ow39J7bOwnDA==",
+      "type": "package",
+      "path": "magiconion.serialization.messagepack/7.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net8.0/MagicOnion.Serialization.MessagePack.dll",
+        "lib/net8.0/MagicOnion.Serialization.MessagePack.xml",
+        "lib/netstandard2.0/MagicOnion.Serialization.MessagePack.dll",
+        "lib/netstandard2.0/MagicOnion.Serialization.MessagePack.xml",
+        "lib/netstandard2.1/MagicOnion.Serialization.MessagePack.dll",
+        "lib/netstandard2.1/MagicOnion.Serialization.MessagePack.xml",
+        "magiconion.serialization.messagepack.7.0.7.nupkg.sha512",
+        "magiconion.serialization.messagepack.nuspec"
+      ]
+    },
+    "MagicOnion.Server/7.0.7": {
+      "sha512": "nXZ0Z3m2FgK3luHr7jL0pcTCoY80Q97/MMAsdTDahyrvh6p1FOPpTLjn1eEaQ/7U27NTQp79eDCBaBq1us2Ysg==",
+      "type": "package",
+      "path": "magiconion.server/7.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net8.0/MagicOnion.Server.dll",
+        "lib/net8.0/MagicOnion.Server.xml",
+        "lib/net9.0/MagicOnion.Server.dll",
+        "lib/net9.0/MagicOnion.Server.xml",
+        "magiconion.server.7.0.7.nupkg.sha512",
+        "magiconion.server.nuspec"
+      ]
+    },
+    "MagicOnion.Shared/7.0.7": {
+      "sha512": "KbtuuDvXtOVBhohFl6wutzgVXv73pE7w2DB0UzGzjnOlS9KdyDqPWNAknXSb5OkYTGQFSuxhs67/elLMbYkNoA==",
+      "type": "package",
+      "path": "magiconion.shared/7.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net8.0/MagicOnion.Shared.dll",
+        "lib/net8.0/MagicOnion.Shared.xml",
+        "lib/netstandard2.0/MagicOnion.Shared.dll",
+        "lib/netstandard2.0/MagicOnion.Shared.xml",
+        "lib/netstandard2.1/MagicOnion.Shared.dll",
+        "lib/netstandard2.1/MagicOnion.Shared.xml",
+        "magiconion.shared.7.0.7.nupkg.sha512",
+        "magiconion.shared.nuspec"
+      ]
+    },
+    "MessagePack/3.1.1": {
+      "sha512": "nC7/arPbdsjcvDwLrdp2aJafk3Y8GbjoomvY1oFCJbODAmgURM9JVKrkIcaZSX1GOLtPSQH4/6rM/TNtSx+U4Q==",
+      "type": "package",
+      "path": "messagepack/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/MessagePack.dll",
+        "lib/net472/MessagePack.xml",
+        "lib/net8.0/MessagePack.dll",
+        "lib/net8.0/MessagePack.xml",
+        "lib/net9.0/MessagePack.dll",
+        "lib/net9.0/MessagePack.xml",
+        "lib/netstandard2.0/MessagePack.dll",
+        "lib/netstandard2.0/MessagePack.xml",
+        "lib/netstandard2.1/MessagePack.dll",
+        "lib/netstandard2.1/MessagePack.xml",
+        "messagepack.3.1.1.nupkg.sha512",
+        "messagepack.nuspec"
+      ]
+    },
+    "MessagePack.Annotations/3.1.1": {
+      "sha512": "z/qHzXoz+SAw8+MDZV6Woge1fWD27v+Ce+9a3AJU7FF7TmXpIvGmALsS0A83RdM0P1utLuJ8UJlhNmjpDJ4y4A==",
+      "type": "package",
+      "path": "messagepack.annotations/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/MessagePack.Annotations.dll",
+        "lib/netstandard2.0/MessagePack.Annotations.xml",
+        "messagepack.annotations.3.1.1.nupkg.sha512",
+        "messagepack.annotations.nuspec"
+      ]
+    },
+    "MessagePackAnalyzer/3.1.1": {
+      "sha512": "gQeHB5RKo7C033FoUToZsvpabWuBR4ajiDoA0dXVTf7SdrA8sB0EGE04t37dDJ+8jIZ9/rCNYUmE67xKPgPThA==",
+      "type": "package",
+      "path": "messagepackanalyzer/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/roslyn4.3/cs/MessagePack.Analyzers.CodeFixes.dll",
+        "analyzers/roslyn4.3/cs/MessagePack.SourceGenerator.dll",
+        "build/MessagePackAnalyzer.targets",
+        "messagepackanalyzer.3.1.1.nupkg.sha512",
+        "messagepackanalyzer.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+      "sha512": "/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn3.11/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn3.11/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn4.0/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "build/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.NET.StringTools/17.11.4": {
+      "sha512": "mudqUHhNpeqIdJoUx2YDWZO/I9uEDYVowan89R6wsomfnUJQk6HteoQTlNjZDixhT2B4IXMkMtgZtoceIjLRmA==",
+      "type": "package",
+      "path": "microsoft.net.stringtools/17.11.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MSBuild-NuGet-Icon.png",
+        "README.md",
+        "lib/net472/Microsoft.NET.StringTools.dll",
+        "lib/net472/Microsoft.NET.StringTools.pdb",
+        "lib/net472/Microsoft.NET.StringTools.xml",
+        "lib/net8.0/Microsoft.NET.StringTools.dll",
+        "lib/net8.0/Microsoft.NET.StringTools.pdb",
+        "lib/net8.0/Microsoft.NET.StringTools.xml",
+        "lib/netstandard2.0/Microsoft.NET.StringTools.dll",
+        "lib/netstandard2.0/Microsoft.NET.StringTools.pdb",
+        "lib/netstandard2.0/Microsoft.NET.StringTools.xml",
+        "microsoft.net.stringtools.17.11.4.nupkg.sha512",
+        "microsoft.net.stringtools.nuspec",
+        "notices/THIRDPARTYNOTICES.txt",
+        "ref/net472/Microsoft.NET.StringTools.dll",
+        "ref/net472/Microsoft.NET.StringTools.xml",
+        "ref/net8.0/Microsoft.NET.StringTools.dll",
+        "ref/net8.0/Microsoft.NET.StringTools.xml",
+        "ref/netstandard2.0/Microsoft.NET.StringTools.dll",
+        "ref/netstandard2.0/Microsoft.NET.StringTools.xml"
+      ]
+    },
+    "Multicaster/2.1.1": {
+      "sha512": "KhcxjWkOG7jwUQwqf6sV8lDMPfj6pn2mhz14q4a4Tkt9ZpH5J4QPZgFw0gyt+Isr4nwPGt8E/FeiRy0aQKBGJg==",
+      "type": "package",
+      "path": "multicaster/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net8.0/Cysharp.Runtime.Multicaster.dll",
+        "lib/net8.0/Cysharp.Runtime.Multicaster.xml",
+        "lib/net9.0/Cysharp.Runtime.Multicaster.dll",
+        "lib/net9.0/Cysharp.Runtime.Multicaster.xml",
+        "multicaster.2.1.1.nupkg.sha512",
+        "multicaster.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "MagicOnion >= 7.0.7"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj",
+      "projectName": "XRUIOS.Interfaces",
+      "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj",
+      "packagesPath": "C:\\Users\\WalkerDev\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\WalkerDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "MagicOnion": {
+            "target": "Package",
+            "version": "[7.0.7, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

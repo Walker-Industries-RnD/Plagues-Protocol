@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRUIOS.Core", "XRUIOS.Core\XRUIOS.Core.csproj", "{B106E871-9CC8-48C8-A2E1-8B07D348F0BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRUIOS.Windows", "XRUIOS.Windows\XRUIOS.Windows.csproj", "{1BD7D92C-EF35-4D4E-965B-4DD426C112C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows Services", "Windows Services", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRUIOS.Windows.PublicAccountDataHandler", "XRUIOS.Windows.PublicAccountDataHandler\XRUIOS.Windows.PublicAccountDataHandler.csproj", "{9BAC5F06-8C8D-47A3-8BAF-B11149D6830A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRUIOS.Interfaces", "XRUIOS.Interfaces\XRUIOS.Interfaces.csproj", "{E2D30ED0-074B-4795-A00D-8B39AD7881D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linux Services", "Linux Services", "{B9648721-84D3-4F04-89D9-6AC3718B7105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRUIOS.Linux.PublicAccountDataHandler", "XRUIOS.Linux.PublicAccountDataHandler\XRUIOS.Linux.PublicAccountDataHandler.csproj", "{1F7EFB15-9CE5-4806-8313-9F2EC78869E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRUIOS.Linux", "XRUIOS.Linux\XRUIOS.Linux.csproj", "{2D0CAD36-2850-49D0-A387-DC12048BE535}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows", "Windows", "{4E3817C5-F0D0-4E02-89A3-4B6FCCFBA04A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linux", "Linux", "{E07B0A36-2E13-4B52-AB02-5E82E7305B4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XRUIOS", "XRUIOS", "{53686902-124C-40F5-B444-0537CB77562E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XRUIOS Arch Test", "XRUIOS Arch Test\XRUIOS Arch Test.csproj", "{37904804-F129-437B-BB63-C277B9297461}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B106E871-9CC8-48C8-A2E1-8B07D348F0BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B106E871-9CC8-48C8-A2E1-8B07D348F0BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B106E871-9CC8-48C8-A2E1-8B07D348F0BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B106E871-9CC8-48C8-A2E1-8B07D348F0BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BD7D92C-EF35-4D4E-965B-4DD426C112C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD7D92C-EF35-4D4E-965B-4DD426C112C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD7D92C-EF35-4D4E-965B-4DD426C112C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BD7D92C-EF35-4D4E-965B-4DD426C112C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BAC5F06-8C8D-47A3-8BAF-B11149D6830A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BAC5F06-8C8D-47A3-8BAF-B11149D6830A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BAC5F06-8C8D-47A3-8BAF-B11149D6830A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BAC5F06-8C8D-47A3-8BAF-B11149D6830A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D30ED0-074B-4795-A00D-8B39AD7881D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D30ED0-074B-4795-A00D-8B39AD7881D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D30ED0-074B-4795-A00D-8B39AD7881D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D30ED0-074B-4795-A00D-8B39AD7881D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F7EFB15-9CE5-4806-8313-9F2EC78869E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F7EFB15-9CE5-4806-8313-9F2EC78869E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F7EFB15-9CE5-4806-8313-9F2EC78869E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F7EFB15-9CE5-4806-8313-9F2EC78869E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D0CAD36-2850-49D0-A387-DC12048BE535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D0CAD36-2850-49D0-A387-DC12048BE535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D0CAD36-2850-49D0-A387-DC12048BE535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D0CAD36-2850-49D0-A387-DC12048BE535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37904804-F129-437B-BB63-C277B9297461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37904804-F129-437B-BB63-C277B9297461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37904804-F129-437B-BB63-C277B9297461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37904804-F129-437B-BB63-C277B9297461}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B106E871-9CC8-48C8-A2E1-8B07D348F0BA} = {53686902-124C-40F5-B444-0537CB77562E}
+		{1BD7D92C-EF35-4D4E-965B-4DD426C112C7} = {4E3817C5-F0D0-4E02-89A3-4B6FCCFBA04A}
+		{9BAC5F06-8C8D-47A3-8BAF-B11149D6830A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{E2D30ED0-074B-4795-A00D-8B39AD7881D1} = {53686902-124C-40F5-B444-0537CB77562E}
+		{1F7EFB15-9CE5-4806-8313-9F2EC78869E9} = {B9648721-84D3-4F04-89D9-6AC3718B7105}
+		{2D0CAD36-2850-49D0-A387-DC12048BE535} = {E07B0A36-2E13-4B52-AB02-5E82E7305B4B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB53920A-C921-4FCE-8BE4-E59F98CA8511}
+	EndGlobalSection
+EndGlobal

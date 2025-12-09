@@ -1,0 +1,378 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS Arch Test\\XRUIOS Arch Test.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS Arch Test\\XRUIOS Arch Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS Arch Test\\XRUIOS Arch Test.csproj",
+        "projectName": "XRUIOS Arch Test",
+        "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS Arch Test\\XRUIOS Arch Test.csproj",
+        "packagesPath": "C:\\Users\\WalkerDev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS Arch Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WalkerDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Core\\XRUIOS.Core.csproj": {
+                "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Core\\XRUIOS.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MagicOnion": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Core\\XRUIOS.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Core\\XRUIOS.Core.csproj",
+        "projectName": "XRUIOS.Core",
+        "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Core\\XRUIOS.Core.csproj",
+        "packagesPath": "C:\\Users\\WalkerDev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WalkerDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj"
+              },
+              "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Linux\\XRUIOS.Linux.csproj": {
+                "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Linux\\XRUIOS.Linux.csproj"
+              },
+              "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Windows\\XRUIOS.Windows.csproj": {
+                "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Windows\\XRUIOS.Windows.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj",
+        "projectName": "XRUIOS.Interfaces",
+        "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\WalkerDev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WalkerDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MagicOnion": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Linux\\XRUIOS.Linux.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Linux\\XRUIOS.Linux.csproj",
+        "projectName": "XRUIOS.Linux",
+        "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Linux\\XRUIOS.Linux.csproj",
+        "packagesPath": "C:\\Users\\WalkerDev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Linux\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WalkerDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MagicOnion": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Windows\\XRUIOS.Windows.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Windows\\XRUIOS.Windows.csproj",
+        "projectName": "XRUIOS.Windows",
+        "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Windows\\XRUIOS.Windows.csproj",
+        "packagesPath": "C:\\Users\\WalkerDev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Windows\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WalkerDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

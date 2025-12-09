@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XRUIOS.Interfaces\XRUIOS.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PariahCybersecurity">
+      <HintPath>..\PariahCybersecurity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

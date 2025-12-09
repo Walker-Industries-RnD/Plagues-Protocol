@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "3X/nzedRZE4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Interfaces\\XRUIOS.Interfaces.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\grpc.aspnetcore.server\\2.57.0\\grpc.aspnetcore.server.2.57.0.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\grpc.core.api\\2.57.0\\grpc.core.api.2.57.0.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\grpc.net.client\\2.57.0\\grpc.net.client.2.57.0.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\grpc.net.common\\2.57.0\\grpc.net.common.2.57.0.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\magiconion\\7.0.7\\magiconion.7.0.7.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\magiconion.abstractions\\7.0.7\\magiconion.abstractions.7.0.7.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\magiconion.client\\7.0.7\\magiconion.client.7.0.7.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\magiconion.serialization.messagepack\\7.0.7\\magiconion.serialization.messagepack.7.0.7.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\magiconion.server\\7.0.7\\magiconion.server.7.0.7.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\magiconion.shared\\7.0.7\\magiconion.shared.7.0.7.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\messagepack\\3.1.1\\messagepack.3.1.1.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\messagepack.annotations\\3.1.1\\messagepack.annotations.3.1.1.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\messagepackanalyzer\\3.1.1\\messagepackanalyzer.3.1.1.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\microsoft.net.stringtools\\17.11.4\\microsoft.net.stringtools.17.11.4.nupkg.sha512",
+    "C:\\Users\\WalkerDev\\.nuget\\packages\\multicaster\\2.1.1\\multicaster.2.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

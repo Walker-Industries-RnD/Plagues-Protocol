@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-XRUIOS.Linux.PublicAccountDataHandler-9e3a3c63-f98a-4ffe-ba55-f313906f7507</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MagicOnion" Version="7.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XRUIOS.Interfaces\XRUIOS.Interfaces.csproj" />
+    <ProjectReference Include="..\XRUIOS.Linux\XRUIOS.Linux.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PariahCybersecurity">
+      <HintPath>..\PariahCybersecurity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
