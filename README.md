@@ -1,14 +1,29 @@
-<p align="center"> <img src="https://github.com/Walker-Industries-RnD/Plagues-Protocol/blob/main/docs/assets/plagues.png" alt="Plagues" width="80%"/> </p>
+<p align="center"> <img src="https://github.com/Walker-Industries-RnD/Plagues-Protocol/blob/main/docs/assets/plagues.png" alt="Plagues" width="60%"/> </p>
 
 
 
- **A fully local, zero-trust system that splits every privileged operation into isolated, self-defending agents so a single breach doesn't mean death.**  
+<p align="center">  **A fully local, zero-trust system that splits every privileged operation into isolated, self-defending agents so a single breach doesn't mean death.**   </p>
 
 <p align="center"> The Plagues Protocol is the ultra-minimalist, zero-trust local RPC protocol that powers every single interaction inside the XRUIOS (Our Cross Platform Framework/OS/Abstraction Layer). </p>
 
-<p align="center">
-  <strong>Windows • Linux • Easy To Add Platforms • Fully Offline • Post Quantum Computing Resistant  • No BS</strong>
+<p align="center"> <strong> Windows • Linux • Easy To Add Platforms • Fully Offline • Post Quantum Computing Resistant  • No BS</strong>
 </p>
+
+<br>
+<p align="center">
+  <a href="https://github.com/Walker-Industries-RnD/Plagues-Protocol"><strong>View on GitHub</strong></a> •
+  <a href="https://walkerindustries.xyz">Walker Industries</a> •
+  <a href="https://discord.gg/H8h8scsxtH">Discord</a> •
+  <a href="https://www.patreon.com/walkerdev">Patreon</a>
+</p>
+
+<p align="center">
+  <a href="https://walker-industries-rnd.github.io/Plagues-Protocol/1.welcome/welcome.html" 
+     style="font-size: 1.4em; color: #58a6ff; text-decoration: none;">
+    <strong> Documentation • Examples • Design </strong>
+  </a>
+</p>
+
 
 ### How it works
 
@@ -39,20 +54,6 @@ Trusted workers:
 
 </div>
 
-<br>
-<p align="center">
-  <a href="https://github.com/Walker-Industries-RnD/Plagues-Protocol"><strong>View on GitHub</strong></a> •
-  <a href="https://walkerindustries.xyz">Walker Industries</a> •
-  <a href="https://discord.gg/H8h8scsxtH">Discord</a> •
-  <a href="https://www.patreon.com/walkerdev">Patreon</a>
-</p>
-
-<p align="center">
-  <a href="https://walker-industries-rnd.github.io/Plagues-Protocol/1.welcome/welcome.html" 
-     style="font-size: 1.4em; color: #58a6ff; text-decoration: none;">
-    <strong>Documentation • Examples • Design </strong>
-  </a>
-</p>
 
 ---
 
