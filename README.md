@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <a href="https://walker-industries-rnd.github.io/Plagues-Protocol/1.welcome/welcome.html" 
+  <a href="https://walker-industries-rnd.github.io/Plagues-Protocol/" 
      style="font-size: 1.4em; color: #58a6ff; text-decoration: none;">
     <strong> Documentation • Examples • Design </strong>
   </a>
