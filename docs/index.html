@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-space=1.0" />
+  <meta name="description" content="Plagues Protocol – Zero-trust local privilege separation. User compromise = zero escalation." />
+  <title>PLAGUES PROTOCOL</title>
+  <link rel="canonical" href="https://walker-industries-rnd.github.io/Plagues-Protocol/1.welcome/welcome.html" />
+
+  <!-- Auto-redirect after 1.5 seconds to main docs -->
+  <meta http-equiv="refresh" content="1.5;url=https://walker-industries-rnd.github.io/Plagues-Protocol/1.welcome/welcome.html" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800;900&display=swap');
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #000;
+      color: #ff0000;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .glitch {
+      font-size: 9vw;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      text-align: center;
+      position: relative;
+      text-shadow: 
+        0 0 20px #ff0000,
+        0 0 40px #ff0000,
+        0 0 60px #ff0000,
+        0 0 100px #ff0000;
+      animation: glow 3s ease-in-out infinite alternate, glitch 4s infinite;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: 'PLAGUES PROTOCOL';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0.8;
+    }
+
+    .glitch::before {
+      animation: glitch1 3.5s infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+      color: #ff3333;
+    }
+
+    .glitch::after {
+      animation: glitch2 3s infinite;
+      clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+      color: #ff6666;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000; }
+      to   { text-shadow: 0 0 30px #ff0000, 0 0 60px #ff0000, 0 0 90px #ff0000, 0 0 120px #ff0000; }
+    }
+
+    @keyframes glitch {
+      0%, 100% { transform: translate(0); }
+      10%, 30%, 50%, 70%, 90% { transform: translate(2px, -2px); }
+      20%, 40%, 60%, 80%     { transform: translate(-2px, 2px); }
+    }
+
+    @keyframes glitch1 {
+      0%, 100% { transform: translate(0); }
+      25% { transform: translate(-3px, 2px); }
+      50% { transform: translate(3px, -2px); }
+      75% { transform: translate(-2px, -1px); }
+    }
+
+    @keyframes glitch2 {
+      0%, 100% { transform: translate(0); }
+      33% { transform: translate(2px, -3px); }
+      66% { transform: translate(-2px, 2px); }
+    }
+
+    .tagline {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+      letter-spacing: 0.3em;
+      color: #ff1a1a;
+      text-shadow: 0 0 20px #ff0000;
+    }
+
+    .scanline {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(transparent 50%, rgba(255,0,0,0.02) 
+            background-size: 100% 6px;
+      animation: scan 10s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes scan {
+      0%   { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    .footnote {
+      margin-top: 8rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    a { color: #ff3333; }
+    a:hover { color: #ff6666; }
+  </style>
+</head>
+<body>
+  <div class="scanline"></div>
+  <div style="text-align:center;z-index:10;">
+    <div class="glitch">PLAGUES PROTOCOL</div>
+    <p class="tagline"> DECENTRALIZED CONTROL - ZERO COMPRIMISE</p>
+    <div class="footnote">
+      <span id="timer">1.5</span>s → entering the system…
+    </div>
+  </div>
+
+  <script>
+    let time = 1.5;
+    const timer = document.getElementById('timer');
+    const interval = setInterval(() => {
+      time -= 0.1;
+      timer.textContent = time.toFixed(1);
+      if (time <= 0) clearInterval(interval);
+    }, 100);
+  </script>
+</body>
+</html>
