@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XRUIOS.Windows")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccadc7c6c3c069e188ccdea2d4cddabe8d12d14f")]
 [assembly: System.Reflection.AssemblyProductAttribute("XRUIOS.Windows")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XRUIOS.Windows")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

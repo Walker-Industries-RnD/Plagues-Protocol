@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FdiJ5Zjf55o=",
+  "dgSpecHash": "Vc2xws7GBZg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\WalkerDev\\Documents\\XRUIOS Application Suite\\The XRUIOS\\XRUIOS.Linux\\XRUIOS.Linux.csproj",
+  "projectFilePath": "C:\\Users\\WalkerDev\\Documents\\GitHub\\Plagues-Protocol\\XRUIOS.Linux\\XRUIOS.Linux.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WalkerDev\\.nuget\\packages\\grpc.aspnetcore.server\\2.57.0\\grpc.aspnetcore.server.2.57.0.nupkg.sha512",
     "C:\\Users\\WalkerDev\\.nuget\\packages\\grpc.core.api\\2.57.0\\grpc.core.api.2.57.0.nupkg.sha512",
