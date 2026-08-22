@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Walker Industries",
+  "classifications": [ "XRUIOS", "Plagues", "Worker" ],
+  "identity": "XRUIOS.Plagues.Worker",
+  "name": "XRUIOS Plagues Worker",
+  "shortName": "xruios-worker",
+  "icon": "icon.png",
+  "description": "A secured Plagues worker (Notary anti-tamper + Eclipse encrypted channel). Singular = one cross-platform worker (default); Cross Platform = one worker that auto-switches Windows/Linux bodies at runtime.",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "XRUIOS.WorkerName",
+  "preferNameDirectory": true,
+  "sources": [
+    { "modifiers": [ { "exclude": [ "README.md" ] } ] }
+  ],
+  "symbols": {
+    "kind": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "singular",
+      "description": "The worker's platform shape.",
+      "choices": [
+        {
+          "choice": "singular",
+          "description": "Singular: ONE worker, assumed cross-platform (the same functions on every OS). One build, no branching. The default."
+        },
+        {
+          "choice": "crossplatform",
+          "description": "Cross Platform: ONE worker that auto-switches between a Windows body and a Linux body at runtime. One build runs on both."
+        }
+      ]
+    },
+    "capability": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "DoWork",
+      "replaces": "SampleCapability",
+      "description": "Name of the first [SeaOfDirac] capability (must be a valid C# identifier)."
+    },
+    "isSingular": {
+      "type": "computed",
+      "value": "(kind == \"singular\")"
+    },
+    "isCross": {
+      "type": "computed",
+      "value": "(kind == \"crossplatform\")"
+    }
+  },
+  "primaryOutputs": [
+    { "path": "XRUIOS.WorkerName.csproj" }
+  ]
+}

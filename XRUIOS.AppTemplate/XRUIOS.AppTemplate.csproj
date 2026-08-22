@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>XRUIOS.AppTemplate</RootNamespace>
+  </PropertyGroup>
+
+  <!-- An app only ever needs the secure client. It never references Eclipse, Notary, or a worker
+       directly — everything goes through the Manager broker. -->
+  <ItemGroup>
+    <ProjectReference Include="..\XRUIOS.Interfaces\XRUIOS.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

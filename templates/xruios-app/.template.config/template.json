@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Walker Industries",
+  "classifications": [ "XRUIOS", "Plagues", "App" ],
+  "identity": "XRUIOS.Plagues.App",
+  "name": "XRUIOS App (Plagues client)",
+  "shortName": "xruios-app",
+  "icon": "icon.png",
+  "description": "A plain XRUIOS app: a broker client that connects to the Manager over the Eclipse secure channel and calls capabilities. Runnable console host plus the framework-agnostic XruiosAppClient you can drop into WPF / Avalonia / MAUI / OpenSilver.",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "XRUIOS.App",
+  "preferNameDirectory": true,
+  "symbols": {
+    "capability": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "DoWork",
+      "replaces": "SampleCapability",
+      "description": "Name of the sample capability wrapper (a valid C# identifier)."
+    }
+  },
+  "primaryOutputs": [
+    { "path": "XRUIOS.App.csproj" }
+  ]
+}

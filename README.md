@@ -59,62 +59,55 @@ Trusted workers:
 
 ## What's In Here
 
-| Focus        | Description                                                                          |
-| ------------ | ------------------------------------------------------------------------------------ |
-| Worker.cs    | A Windows Specific Service Worker Example                                            |
-| Worker.cs    | A Linux Specific Service Worker Example                                              |
-| PublicAcc.cs | The MagicOnion Server Interface And Definitions Shared Between Linux/Windows Workers |
-| Accounts.cs  | The Windows specific function for getting the data from the Service Worker           |
-| Accounts.cs  | The Linux specific function for getting the data from the Service Worker             |
-| Core.cs      | Where code cross platform by default goes + the XRUIOS.Windows or Linux              |
-| Program.cs   | A CMD Test Of The XRUIOS.Core                                                        |
-|              |                                                                                      |
+| Path | What it is |
+| ---- | ---------- |
+| `XRUIOS.Interfaces` | Shared contracts + the secure layer (Eclipse client, enrollment, secure store). |
+| `XRUIOS.Core` | Cross-platform-by-default code; selects the Windows or Linux body at runtime. |
+| `XRUIOS.Windows` / `XRUIOS.Linux` | The platform-specific account bodies. |
+| `XRUIOS.Windows.PublicAccountDataHandler` / `XRUIOS.Linux.PublicAccountDataHandler` | Example secured workers (public account data), one per OS. |
+| `XRUIOS.CalendarDataHandler` | The canonical worker example — a Calendar capability. |
+| `XRUIOS.CalendarApp` | An example app that calls it through the Manager. |
+| `XRUIOS Arch Test` | A smoke test proving a plain app **can't** bypass the Manager to reach a worker. |
+| `templates/` | `dotnet new` templates: `xruios-manager`, `xruios-worker`, `xruios-app`. |
+| `libs/` | Compiled dependencies (Eclipse, Notary, Secure Store, Keeper of Tomes). |
+| `docs/` | The documentation site (design + how-to). |
 
+## Scaffold your own
 
-> Full overview → [[1. Design Philosophy]]
+The whole solution ships as `dotnet new` templates — install once from the repo root, then generate:
+
+```bash
+dotnet new install ./templates/xruios-manager
+dotnet new install ./templates/xruios-worker
+dotnet new install ./templates/xruios-app
+
+dotnet new xruios-manager -n XRUIOS.Manager
+dotnet new xruios-worker  -n XRUIOS.WeatherDataHandler --capability GetForecast
+dotnet new xruios-app     -n XRUIOS.WeatherApp         --capability GetForecast
+```
+
+> Full overview → [Documentation](https://walker-industries-rnd.github.io/Plagues-Protocol/)
 
 ---
 
 ## Using The System
 
-```csharp
-//The Base DLL (Ensure you also have all other DLLs for your OS at minimum)
-//Also Shared References Between OSes
+Apps never touch a worker directly — every call goes through the **Manager**, which authenticates the
+app, checks XRUIOS.Permission, and relays it to the owning worker. (A plain app trying to connect
+straight to a worker is refused — that's what `XRUIOS Arch Test` proves.)
 
-using XRUIOS.Core;
-using XRUIOS.Interfaces;
-```
-```csharp
-//We assume the worker "XRUIOS.Windows.PublicAccountDataHandler" was launched already at start, which should have resulted in the address "worker_addr" being populated with the API endpoint we want to 
-
-//If the worker address is not exist, you can wait for it to be set but for now we handle the exception
-var clientAddr = Utils.SecureStore.Get<string>("worker_addr");
-if (clientAddr == null)
-{
-    throw new Exception("Worker address not found in secure storage.");
-}
-```
+The `xruios-app` template gives you a one-file client for exactly this:
 
 ```csharp
-//Take the resulting address and setup an Onion Client
+// creds arrive via the Manager (env handoff) or attested self-enrollment — nothing on disk
+await using var xruios = await XruiosAppClient.ConnectAsync("myapp");
 
-using var channel = Grpc.Net.Client.GrpcChannel.ForAddress(clientAddr);
-var client = MagicOnion.Client.MagicOnionClient.Create<XRUIOS.Interfaces.IPublicAcc>(channel);
-```
-```csharp
-//Get the resulting data and ensure it shows something
-var result = await client.GetAccInfo(Environment.UserName);
-
-Console.Write(result);
-
-Console.WriteLine($"Name: {result.Name}");
-Console.WriteLine($"Folder: {result.OSFolder}");
-Console.WriteLine($"Checked: {result.LastCheck}");
-```
-```
+// call a capability by name; a capability you weren't granted is refused before it reaches a worker
+string info = await xruios.CallAsync<string>("GetAccInfo", new() { ["user"] = Environment.UserName });
+Console.WriteLine(info);
 ```
 
-Want to understand how to make your own services?  **Check Out [[1. Setup The Plagues Protocol]]**
+Want to build your own workers and apps?  **See the [Documentation](https://walker-industries-rnd.github.io/Plagues-Protocol/).**
 
 ---
 ## Other Services

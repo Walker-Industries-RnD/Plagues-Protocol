@@ -9,19 +9,20 @@ namespace XRUIOS.Core
 {
     public static class AccountsProvider
     {
-        public static async Task<PublicAccount?> GetPublicAcc(string Username)
+        // workerPsk is the Manager-held per-worker secret; this provider is a Manager-side helper.
+        public static async Task<PublicAccount?> GetPublicAcc(string Username, byte[] workerPsk)
         {
             PublicAccount? publicAcc = null;
 
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 var ts = new Windows.Accounts();
-                publicAcc = await ts.GetAccData(Username);
+                publicAcc = await ts.GetAccData(Username, workerPsk);
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
                 var ts = new Linux.Accounts();
-                publicAcc = await ts.GetAccData(Username);
+                publicAcc = await ts.GetAccData(Username, workerPsk);
             }
             else
             {

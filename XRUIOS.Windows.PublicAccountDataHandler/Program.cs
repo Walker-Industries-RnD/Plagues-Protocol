@@ -1,23 +1,23 @@
-using MagicOnion.Server;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
-using XRUIOS.Windows.PublicAccountDataHandler;
+using System.Reflection;
+using XRUIOS.Interfaces;
 
-var builder = WebApplication.CreateBuilder(args);
+// XRUIOS Windows worker — "PublicAccDataHandler".
+//
+// Boots as an Eclipse-secured Plagues worker:
+//   1. NotaryGuard verifies this folder against its baseline (anti-tamper) before listening.
+//   2. SecureWorkerHost stands up the encrypted channel and publishes its address.
+//   3. The permission gate (Manager-supplied in production) decides who may call what.
+//
+// The gate here allows only "GetAccInfo"; everything else gets refused. Swap in the
+// Manager's XRUIOS.Permission-backed gate when running under the Manager.
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenLocalhost(5000, o => o.Protocols = HttpProtocols.Http2);
-});
+const string ServerName = "XRUIOS.Windows.PublicAccDataHandler";
 
-builder.Services.AddHttpContextAccessor();
-builder.Services.AddSingleton<Worker>();
-builder.Services.AddHostedService<Worker>();
-builder.Services.AddMagicOnion();
+IPermissionGate gate = new CapabilityAllowListGate("GetAccInfo");
+NotaryGuard guard = NotaryGuard.ForCurrentWorker(ServerName);
 
-var app = builder.Build();
-
-app.MapMagicOnionService<PublicAccService>();
-
-app.Run();
+await SecureWorkerHost.Run(
+    serverName: ServerName,
+    capabilityAssembly: Assembly.GetExecutingAssembly(),
+    gate: gate,
+    guard: guard);

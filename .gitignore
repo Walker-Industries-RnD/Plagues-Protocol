@@ -1,0 +1,35 @@
+# ---- Build output ----
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+# ---- IDEs ----
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# ---- .NET ----
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nupkg
+*.snupkg
+*.received.*
+
+# ---- Local Claude Code settings (per-machine, not shared) ----
+.claude/settings.local.json
+
+# ---- OS cruft ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+/.vs/The XRUIOS/CopilotIndices
+/.vs

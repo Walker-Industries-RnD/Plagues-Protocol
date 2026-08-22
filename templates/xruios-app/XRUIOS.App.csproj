@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- A plain XRUIOS app: a broker CLIENT (not a server), so the standard SDK, not the Web SDK.
+         It connects out to the Manager; it never hosts anything. -->
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>XRUIOS.App</RootNamespace>
+    <AssemblyName>XRUIOS.App</AssemblyName>
+  </PropertyGroup>
+
+  <!-- Shared Plagues layer: EclipseSecureClient + XruiosEnrollment resolve here. -->
+  <ItemGroup>
+    <ProjectReference Include="..\XRUIOS.Interfaces\XRUIOS.Interfaces.csproj" />
+  </ItemGroup>
+
+  <!-- Direct reference for Eclipse types (not transitive via the project ref). -->
+  <ItemGroup>
+    <Reference Include="EclipseProject">
+      <HintPath>..\libs\EclipseProject.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

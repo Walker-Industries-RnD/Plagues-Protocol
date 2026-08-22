@@ -1,33 +1,31 @@
-﻿using Grpc.Net.Client;
-using MagicOnion.Client;
 using XRUIOS.Interfaces;
 
 namespace XRUIOS.Windows
 {
     public class Accounts
     {
-        public async Task<PublicAccount?> GetAccData(string accountName)
+        // SecureStore key the Windows worker publishes its bound address under.
+        private const string WorkerName = "XRUIOS.Windows.PublicAccDataHandler";
+
+        // Requires the worker's Manager-held PSK — this path runs inside the Manager (or a peer the
+        // Manager trusted with the key), never an arbitrary app.
+        public async Task<PublicAccount?> GetAccData(string accountName, byte[] workerPsk)
         {
             try
             {
-                // Get the dynamically assigned worker address
-                var serviceAddr = Environment.GetEnvironmentVariable("XRUIOS_WORKER_ADDR") ?? "https://localhost:5001";
+                // Discover the worker's ephemeral address (published by SecureWorkerHost).
+                var serviceAddr = Utils.SecureStore.Get<string>(WorkerName)
+                    ?? throw new Exception($"Worker '{WorkerName}' address not found in SecureStore. Is the worker running?");
 
-                // Create gRPC channel
-                using var channel = GrpcChannel.ForAddress(serviceAddr);
+                // Open an Eclipse-secured session and call the capability over the encrypted channel.
+                await using var session = await EclipseSecureClient.ConnectAsync(serviceAddr, "xruios-manager", workerPsk);
 
-                // Create a proxy client
-                var client = MagicOnionClient.Create<IPublicAcc>(channel);
-
-                // Call the server method
-                var account = await client.GetAccInfo(accountName);
-
-                return account;
+                return await session.InvokeAsync<PublicAccount>("GetAccInfo",
+                    new Dictionary<string, object?> { ["accountName"] = accountName });
             }
-
             catch (Exception ex)
             {
-                throw new Exception("An error occured while getting Account Data: " + ex.Message);
+                throw new Exception("An error occured while getting Account Data: " + ex.Message, ex);
             }
         }
     }

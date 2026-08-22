@@ -1,24 +1,19 @@
-using MagicOnion.Server;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
-using XRUIOS.Linux.PublicAccountDataHandler;
+using System.Reflection;
+using XRUIOS.Interfaces;
 
-var builder = WebApplication.CreateBuilder(args);
+// XRUIOS Linux worker — "PublicAccDataHandler". Same secured-worker boot as the Windows worker.
+//
+// We bind an ephemeral loopback port (not a Unix socket) so client discovery is identical across
+// platforms: the client just reads the published http:// address from SecureStore. Switch to a
+// Unix socket by passing unixSocketPath to SecureWorkerHost.Run if you prefer.
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenUnixSocket("/var/run/xruios/publicacc.sock", o => o.Protocols = HttpProtocols.Http2);
-    // Or for testing: options.ListenLocalhost(5000, o => o.Protocols = HttpProtocols.Http2);
-});
+const string ServerName = "XRUIOS.Linux.PublicAccDataHandler";
 
-builder.Services.AddHttpContextAccessor();
-builder.Services.AddSingleton<Worker>();
-builder.Services.AddHostedService<Worker>();
-builder.Services.AddMagicOnion();
+IPermissionGate gate = new CapabilityAllowListGate("GetAccInfo");
+NotaryGuard guard = NotaryGuard.ForCurrentWorker(ServerName);
 
-var app = builder.Build();
-
-app.MapMagicOnionService<PublicAccService>();
-
-app.Run();
+await SecureWorkerHost.Run(
+    serverName: ServerName,
+    capabilityAssembly: Assembly.GetExecutingAssembly(),
+    gate: gate,
+    guard: guard);

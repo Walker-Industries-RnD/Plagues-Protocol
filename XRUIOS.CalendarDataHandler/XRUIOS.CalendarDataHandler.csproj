@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XRUIOS.Interfaces\XRUIOS.Interfaces.csproj" />
+  </ItemGroup>
+
+  <!-- Direct reference for Eclipse's [SeaOfDirac] attribute (not transitive via project ref). -->
+  <ItemGroup>
+    <Reference Include="EclipseProject">
+      <HintPath>..\libs\EclipseProject.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

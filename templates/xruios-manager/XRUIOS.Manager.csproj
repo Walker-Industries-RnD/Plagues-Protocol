@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>XRUIOS.Manager</RootNamespace>
+    <AssemblyName>XRUIOS.Manager</AssemblyName>
+  </PropertyGroup>
+
+  <!-- Cross-repo reference to the Plagues shared layer: gives us WorkerAnnouncement,
+       EclipseSecureClient, Utils.SecureStore and (transitively) NotaryCore for checksums. -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\Plagues-Protocol\XRUIOS.Interfaces\XRUIOS.Interfaces.csproj" />
+    <!-- The real permission store (encrypted JSON gated by the Manager's master key). -->
+    <ProjectReference Include="..\..\XRUIOS.Permission\PermissionHandler\PermissionHandler.csproj" />
+  </ItemGroup>
+
+  <!-- Direct DLL references (raw references aren't transitive through the project ref above):
+       Notary for the checksum step, Eclipse for the broker's DiracRequest/Response + AeadChannel. -->
+  <ItemGroup>
+    <Reference Include="NotaryCore">
+      <HintPath>..\..\Plagues-Protocol\libs\NotaryCore.dll</HintPath>
+    </Reference>
+    <Reference Include="NotaryShared">
+      <HintPath>..\..\Plagues-Protocol\libs\NotaryShared.dll</HintPath>
+    </Reference>
+    <Reference Include="EclipseProject">
+      <HintPath>..\..\Plagues-Protocol\libs\EclipseProject.dll</HintPath>
+    </Reference>
+    <Reference Include="EclipseLCL">
+      <HintPath>..\..\Plagues-Protocol\libs\EclipseLCL.dll</HintPath>
+    </Reference>
+    <Reference Include="PariahCybersecurity">
+      <HintPath>..\..\Plagues-Protocol\PariahCybersecurity.dll</HintPath>
+    </Reference>
+    <!-- KeeperOfTomes watches the certificate folder (change detection). -->
+    <Reference Include="KeeperOfTomes">
+      <HintPath>..\..\Plagues-Protocol\libs\KeeperOfTomes.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <!-- KeeperOfTomes' own dependency, needed at runtime since we reference it as a raw DLL. -->
+  <ItemGroup>
+    <PackageReference Include="Standart.Hash.xxHash" Version="4.0.5" />
+  </ItemGroup>
+
+</Project>

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -16,14 +16,10 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <!-- Client side: the secure transport lives in XRUIOS.Interfaces (EclipseSecureClient),
+       which brings MagicOnion/Grpc/Eclipse transitively. -->
   <ItemGroup>
     <ProjectReference Include="..\XRUIOS.Interfaces\XRUIOS.Interfaces.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="PariahCybersecurity">
-      <HintPath>..\PariahCybersecurity.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

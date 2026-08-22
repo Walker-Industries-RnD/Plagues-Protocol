@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Walker Industries",
+  "classifications": [ "XRUIOS", "Plagues", "Manager" ],
+  "identity": "XRUIOS.Plagues.Manager",
+  "name": "XRUIOS Manager",
+  "shortName": "xruios-manager",
+  "icon": "icon.png",
+  "description": "The trusted core: checksums + launches + supervises Plagues workers, holds the master key + per-app PSKs, and runs the permission-checked broker. One per solution.",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "XRUIOS.Manager",
+  "preferNameDirectory": true,
+  "sources": [
+    { "modifiers": [ { "exclude": [ "README.md" ] } ] }
+  ],
+  "primaryOutputs": [
+    { "path": "XRUIOS.Manager.csproj" }
+  ]
+}

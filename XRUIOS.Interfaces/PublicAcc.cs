@@ -1,14 +1,19 @@
-﻿using MagicOnion;
-using System.Runtime.Serialization;
+using MessagePack;
 
 namespace XRUIOS.Interfaces
 {
-    [DataContract]
+    // The account DTO returned by the GetAccInfo capability.
+    //
+    // This used to be a MagicOnion [DataContract] carried by the IPublicAcc service.
+    // The IPublicAcc service is gone: capabilities are now exposed as [SeaOfDirac]
+    // methods and invoked over Eclipse's encrypted channel, where payloads are
+    // serialized with MessagePack. Hence the [MessagePackObject] annotation.
+    [MessagePackObject(keyAsPropertyName: true)]
     public struct PublicAccount
     {
-        [DataMember] public string Name;
-        [DataMember] public string LastCheck;
-        [DataMember] public string OSFolder;
+        public string Name { get; set; }
+        public string LastCheck { get; set; }
+        public string OSFolder { get; set; }
 
         public PublicAccount(string name, string lastCheck, string oSFolder)
         {
@@ -16,13 +21,8 @@ namespace XRUIOS.Interfaces
             LastCheck = lastCheck;
             OSFolder = oSFolder;
         }
+
+        public override string ToString() =>
+            $"PublicAccount(Name={Name}, OSFolder={OSFolder}, LastCheck={LastCheck})";
     }
-
-    public interface IPublicAcc : IService<IPublicAcc>
-    {
-        UnaryResult<PublicAccount> GetAccInfo(string Acc);
-    }
-
-
-
 }
