@@ -2,7 +2,11 @@
 
 
 
-<p align="center">  **A fully local, zero-trust system that splits every privileged operation into isolated, self-defending agents so a single breach doesn't mean death.**   </p>
+<p align="center">  
+  
+**A fully local, zero-trust system that splits every privileged operation into isolated, self-defending agents so a single breach doesn't mean death.**  
+
+</p>
 
 <p align="center"> The Plagues Protocol is the ultra-minimalist, zero-trust local RPC protocol that powers every single interaction inside the XRUIOS (Our Cross Platform Framework/OS/Abstraction Layer). </p>
 
